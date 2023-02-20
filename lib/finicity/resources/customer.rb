@@ -2,7 +2,7 @@ module Finicity
   module Resources
     class Customer < Base
       def self.add(username)
-        endpoint = "/aggregation/v1/customers/#{Finicity.configs.app_type}"
+        endpoint = "/aggregation/v2/customers/#{Finicity.configs.app_type}"
         body = { username: username }
 
         request(:post, endpoint, body: body)
